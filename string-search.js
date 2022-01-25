@@ -41,6 +41,14 @@ console.log(str4);
 }
 
 // String endsWith()
+{
+    let text = "John Doe";
+    text.endsWith("Doe"); //returns true if a string ends with a specified value, otherwise false
+}
+{
+    let text = "Hello world, welcome to the universe.";
+    text.endsWith("world", 11); //Check in the 11 first characters of a string ends with "world"
+}
 
 //String match()
 {

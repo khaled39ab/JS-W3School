@@ -88,4 +88,4 @@ const myBoys = ["Emil", "Tobias", "Linus"];
 //     console.log(citrus2);
 //     console.log(citrus3);
 //     console.log(citrus);
-// }
+}

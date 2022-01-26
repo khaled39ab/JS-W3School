@@ -85,7 +85,7 @@ const myBoys = ["Emil", "Tobias", "Linus"];
     const citrus = fruits.slice(3);
     const citrus2 = fruits.slice(1, 3);
     const citrus3 = fruits.slice(1);
-    console.log(citrus2);
-    console.log(citrus3);
-    console.log(citrus);
-}
+//     console.log(citrus2);
+//     console.log(citrus3);
+//     console.log(citrus);
+// }

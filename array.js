@@ -46,3 +46,7 @@ function fruit(value){
     fruits.push("Lemon");
     console.log(fruits);
 }
+{
+    const fruits = ["Banana", "Orange", "Apple"];
+    fruits[fruits.length] = "Lemon";
+}

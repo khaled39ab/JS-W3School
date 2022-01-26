@@ -65,3 +65,27 @@ const myBoys = ["Emil", "Tobias", "Linus"];
     const arr3 = ["Robin", "Morgan"];
     const myChildren = arr1.concat(arr2, arr3);
 }
+
+// The splice() method can be used to add new items to an array
+{
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    const splice = fruits.splice(2, 0, "Lemon", "Kiwi");
+    // The first parameter (2) defines the position where new elements should be added (spliced in).
+    // The second parameter (0) defines how many elements should be removed.
+    // The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.
+    console.log(fruits);
+    const splice2 = fruits.splice(0, 1); //Using splice() to Remove Elements
+    console.log(fruits);
+}
+
+// JavaScript Array slice()
+// The slice() method slices out a piece of an array into a new array.
+{
+    const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+    const citrus = fruits.slice(3);
+    const citrus2 = fruits.slice(1, 3);
+    const citrus3 = fruits.slice(1);
+    console.log(citrus2);
+    console.log(citrus3);
+    console.log(citrus);
+}

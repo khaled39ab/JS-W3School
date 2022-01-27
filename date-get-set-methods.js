@@ -54,5 +54,64 @@
     console.log(d.getDay()); //In JavaScript, the first day of the week (0) means "Sunday"
 }
 
+//================================== set Methods ==================================
+// The setFullYear() Method
+// The setFullYear() method sets the year of a date object. In this example to 2020
+{
+    const d = new Date();
+    d.setFullYear(2020);
+}
+// The setFullYear() method can optionally set month and day
+{
+    const d = new Date();
+    d.setFullYear(2020, 11, 3);
+}
 
+// The setMonth() Method
+{
+    const d = new Date();
+    d.setMonth(11);
+}
 
+// The setDate() Method
+{
+    const d = new Date();
+    d.setDate(31);
+}
+
+// The setHours() Method
+{
+    const d = new Date();
+    d.setHours(22);
+}
+
+// The setMinutes() Method
+{
+    const d = new Date();
+    d.setMinutes(30);
+}
+
+// The setSeconds() Method
+{
+    const d = new Date();
+    d.setSeconds(30);
+}
+
+// Compare Dates
+// Dates can easily be compared.
+
+// The following example compares today's date with January 14, 2100
+
+{
+    let text = "";
+    const today = new Date();
+    const someday = new Date();
+    someday.setFullYear(2100, 0, 14);
+    
+    if (someday > today) {
+      text = "Today is before January 14, 2100.";
+    } else {
+      text = "Today is after January 14, 2100.";
+    }
+    console.log(text);
+}

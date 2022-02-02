@@ -44,3 +44,11 @@
     Number(true)      // returns 1
 }
 
+// Converting Booleans to Strings
+{
+    String(false)      // returns "false"
+    String(true)       // returns "true"
+
+    false.toString()   // returns "false"
+    true.toString()    // returns "true"
+}

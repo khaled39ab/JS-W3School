@@ -31,3 +31,16 @@
     e = new Date();
     e.getTime()        // returns 1404568027739
 }
+
+// Converting Dates to Strings
+{
+    String(Date())  // returns "Thu Jul 17 2014 15:38:19 GMT+0200 (W. Europe Daylight Time)"
+    Date().toString()  // returns "Thu Jul 17 2014 15:38:19 GMT+0200 (W. Europe Daylight Time)"
+}
+
+// Converting Booleans to Numbers
+{
+    Number(false)     // returns 0
+    Number(true)      // returns 1
+}
+

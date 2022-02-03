@@ -57,3 +57,15 @@
         console.log(err);
       }
 }
+
+// Type Error
+// A TypeError is thrown if you use a value that is outside the range of expected types
+{
+    let num = 1;
+    try {
+      num.toUpperCase();   // You cannot convert a number to upper case
+    }
+    catch(err) {
+      console.log(err);
+    }
+}

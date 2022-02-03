@@ -23,6 +23,7 @@
     }
 }
 
+{
 // Error Name Values
 // Six different values can be returned by the error name property
 
@@ -32,3 +33,16 @@
 // SyntaxError	A syntax error has occurred
 // TypeError	A type error has occurred
 // URIError	An error in encodeURI() has occurred
+}
+
+// Reference Error
+// A ReferenceError is thrown if you use (reference) a variable that has not been declared
+{
+    let x = 5;
+    try {
+      x = y + 1;   // y cannot be used (referenced)
+    }
+    catch(err) {
+      console.log(err);
+    }
+}

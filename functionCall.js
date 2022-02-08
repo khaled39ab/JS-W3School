@@ -29,7 +29,7 @@ console.log(person.fullName.call(person2));
         firstName: "Mary",
         lastName: "Doe",
         salary: 20000,
-        cost: function(rent, pocketMoney){
+        cost: function (rent, pocketMoney) {
             this.salary = this.salary - rent - pocketMoney;
             return this.salary;
         }
@@ -40,4 +40,20 @@ console.log(person.fullName.call(person2));
     console.log(person2.salary);
     console.log(person2.cost(5000, 1000));
 
+}
+
+{
+    const person = {
+        fullName: function (city, country) {
+            return this.firstName + " " + this.lastName + "," + city + "," + country;
+        }
+    }
+
+    const person1 = {
+        firstName: "John",
+        lastName: "Doe"
+    }
+
+    const details = person.fullName.call(person1, "Oslo", "Norway");
+    console.log(details);
 }

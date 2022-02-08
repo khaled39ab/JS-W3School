@@ -49,8 +49,15 @@
 
     const rest2 = person2.cost.apply(person3, [2000, 1500])
     console.log(rest2);
-    
+
     console.log(person2.salary);
     console.log(person2.cost(5000, 1000));
 
 }
+
+// Simulate a Max Method on Arrays
+// JavaScript arrays do not have a max() method, you can apply the Math.max() method instead.
+const highest = Math.max.apply(null, [15, 22, 13, 17, 19]); 
+// const highest = Math.max.apply(Math, [15, 22, 13, 17, 19]); //will return same output
+// const highest = Math.max.apply(0, [15, 22, 13, 17, 19]);  //will return same output
+console.log(highest);

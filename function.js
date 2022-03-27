@@ -14,7 +14,7 @@ let z = x(4, 3); //this is  invoked/ call
 // Because of this, JavaScript functions can be called before they are declared:
 myFunction(5); //this will also work
 function myFunction(y) {
-    return y * y;
+  return y * y;
 }
 
 
@@ -28,7 +28,7 @@ function myFunction(y) {
 // }
 // // ex();
 (function () {
-    console.log("Hello function");  // I will invoke myself
+  console.log("Hello function");  // I will invoke myself
 })();
 
 
@@ -39,7 +39,7 @@ function myFunction(y) {
 // JavaScript functions have both properties and methods.
 // The arguments.length property returns the number of arguments received when the function was invoked:
 function myFunction(a, b) {
-    return arguments.length;
+  return arguments.length;
 }
 // console.log(myFunction());
 
@@ -56,7 +56,7 @@ Using const is safer than using var, because a function expression is always con
 
 // ES5
 var xy = function (x, y) {
-    return x * y;
+  return x * y;
 }
 // ES6
 const xyz = (x, y) => x * y;
@@ -73,13 +73,13 @@ console.log("-------------------------------------------------------------------
 /*Function parameters are the names listed in the function definition.
 Function arguments are the real values passed to (and received by) the function.*/
 function functionName(parameter1, parameter2, parameter3) {
-    // code to be executed
+  // code to be executed
 }
 
 
 // Default Parameters
 function myFunction(x, y = 2) {
-    // function code
+  // function code
 }
 
 
@@ -134,13 +134,72 @@ console.log("-------------------------------------------------------------------
 // JavaScript Function Invocation
 
 
+// Invoking a JavaScript Function
+
+/* The code inside a function is not executed when the function is defined.
+The code inside a function is executed when the function is invoked.
+It is common to use the term "call a function" instead of "invoke a function".
+It is also common to say "call upon a function", "start a function", or "execute a function".
+In this tutorial, we will use invoke, because a JavaScript function can be invoked without being called. */
+
 // Invoking/calling a Function as a Function
 function myFunction(a, b) {
   return a * b;
 }
 myFunction(10, 2);  //this is call a function
 
-function myFunction2(a, b) {
-  return a * b;
+const a = {
+  myFunction2: function (a, b) {
+    return a * b;
+  }
 }
-window.myFunction2(10, 2); //this is invoke a function
+a.myFunction2(10, 2); //this is invoke a function
+
+
+// Invoking a Function as a Method
+
+/* In JavaScript you can define functions as object methods.
+The following example creates an object (myObject), with two properties (firstName and lastName), and a method (fullName): */
+const myObject = {
+  firstName: "John",
+  lastName: "Doe",
+  fullName: function () {
+    return this.firstName + " " + this.lastName;
+  }
+}
+console.log(myObject.fullName());
+
+
+const myObject2 = {
+  firstName:"John",
+  lastName: "Doe",
+  fullName: function () {
+    return this;
+  }
+}
+
+// This will return [object Object] (the owner object)
+myObject2.fullName();
+
+
+// Invoking a Function with a Function Constructor
+
+/* If a function invocation is preceded with the new keyword, it is a constructor invocation.
+It looks like you create a new function, but since JavaScript functions are objects you actually create a new object: */
+// This is a function constructor:
+function MyFunction3(arg1, arg2) {
+  this.firstName = arg1;
+  this.lastName  = arg2;
+}
+
+// This creates a new object
+const myObj = new MyFunction3("John", "Doe");
+
+// This will return "John"
+myObj.firstName;
+
+// A constructor invocation creates a new object. The new object inherits the properties and methods from its constructor.
+
+/* 
+The this keyword in the constructor does not have a value.
+The value of this will be the new object created when the function is invoked. */

@@ -41,7 +41,7 @@ function myFunction(y) {
 function myFunction(a, b) {
     return arguments.length;
 }
-console.log(myFunction(5, 6));
+// console.log(myFunction());
 
 
 // Arrow Functions
@@ -109,7 +109,7 @@ function sumAll() {
   }
   return sum;
 }
-
+console.log(sumAll(n));
 
 
 
@@ -126,3 +126,6 @@ Changes to arguments are not visible (reflected) outside the function.*/
 Because of this, objects will behave like they are passed by reference:
 If a function changes an object property, it changes the original value.
 Changes to object properties are visible (reflected) outside the function.*/
+
+
+console.log("---------------------------------------------------------------------");

@@ -129,3 +129,18 @@ Changes to object properties are visible (reflected) outside the function.*/
 
 
 console.log("---------------------------------------------------------------------");
+
+
+// JavaScript Function Invocation
+
+
+// Invoking/calling a Function as a Function
+function myFunction(a, b) {
+  return a * b;
+}
+myFunction(10, 2);  //this is call a function
+
+function myFunction2(a, b) {
+  return a * b;
+}
+window.myFunction2(10, 2); //this is invoke a function

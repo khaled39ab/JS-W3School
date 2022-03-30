@@ -78,3 +78,42 @@ console.log("===================================================================
 
 
 
+// JavaScript Function apply()
+
+// The JavaScript apply() Method
+// The apply() method is similar to the call() method
+{
+  const person = {
+    fullName: function() {
+      return this.firstName + " " + this.lastName;
+    }
+  }
+  
+  const person1 = {
+    firstName: "Mary",
+    lastName: "Doe"
+  }
+  
+  console.log(person.fullName.apply(person1));
+  //same as call();
+}
+
+/* The Difference Between call() and apply()
+The difference is:
+The call() method takes arguments separately.
+The apply() method takes arguments as an array. */
+
+{
+  const person = {
+    fullName: function(city, country) {
+      return this.firstName + " " + this.lastName + "," + city + "," + country;
+    }
+  }
+  
+  const person1 = {
+    firstName:"John",
+    lastName: "Doe"
+  }
+  
+  console.log(person.fullName.apply(person1, ["Oslo", "Norway"]));
+}

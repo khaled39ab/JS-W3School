@@ -34,3 +34,47 @@ In a function, this refers to the global object.
 In a function, in strict mode, this is undefined.
 In an event, this refers to the element that received the event.
 Methods like call(), apply(), and bind() can refer this to any object. */
+
+
+
+
+// The JavaScript call() Method
+/* The call() method is a predefined JavaScript method.
+It can be used to invoke (call) a method with an owner object as an argument (parameter). */
+const personA = {
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+}
+const person1 = {
+  firstName:"John",
+  lastName: "Doe"
+}
+const person2 = {
+  firstName:"Mary",
+  lastName: "Doe"
+}
+
+console.log(personA.fullName.call(person1));
+console.log(personA.fullName.call(person2));
+
+// The call() Method with Arguments
+// The call() method can accept arguments:
+const personB = {
+  fullName: function(city, country) {
+    return this.firstName + " " + this.lastName + " from " + city + "," + country;
+  }
+}
+
+const person3 = {
+  firstName:"John",
+  lastName: "Doe"
+}
+console.log(personB.fullName.call(person3, "Oslo", "Norway"));
+
+
+
+console.log("===============================================================================================");
+
+
+

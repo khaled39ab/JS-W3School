@@ -125,6 +125,15 @@ We need a closure. */
     }
   })();
   console.log(add());
+
+  // function add(){
+  //   let counter = 0 ;
+  //   return function(){
+  //     counter += 1;
+  //     return counter
+  //   }
+  // }
+  // console.log(add()());
 }
 /* Example Explained
 The variable add is assigned to the return value of a self-invoking function.

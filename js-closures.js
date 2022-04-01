@@ -17,7 +17,6 @@ function myFunction2() {
 }
 
 
-
 // Variables created without a declaration keyword (var, let, or const) are always global, even if they are created inside a function.
 function myFunction3() {
   a = 4;
@@ -35,12 +34,10 @@ You could use a global variable, and a function to increase the counter: */
   function add() {
     counter += 1;
   }
-
   // Call add() 3 times
   add();
   add();
   add();
-
   // The counter should now be 3
   console.log(counter);
 }
@@ -56,12 +53,10 @@ You could use a global variable, and a function to increase the counter: */
     let counter = 0;
     counter += 1;
   }
-
   // Call add() 3 times
   add();
   add();
   add();
-
   //The counter should now be 3. But it is 0
   console.log(counter);
 }
@@ -75,12 +70,10 @@ You could use a global variable, and a function to increase the counter: */
     counter += 1;
     return counter;
   }
-
   // Call add() 3 times
   add();
   add();
   add();
-
   //The counter should now be 3. But it is 1.
   console.log(add());
 }
